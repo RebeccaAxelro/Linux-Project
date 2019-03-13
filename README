@@ -1,0 +1,39 @@
+Semester Project: Applied Linux Programming & Scripting
+Project by: Rebecca Axelrod
+
+My hypothesis for this project was to see if antidepressants are more common in more populated populated areas, of ages 65
+years and older.
+
+The way I originally wanted to go through with this was to do through Medicaid data, but later realizing the data would not
+be applicable since the latitude and longitude it gave me where the prescription was given was the same longitdue and
+latitude for a state, so would't help me specify certain areas by a zipcode.
+
+I then decided to go through Medicare data, and my hypothesis would specifically be for 65 years and older. The fields that
+I need from that file was the specific prescriptions that are antidepressents. So I did my research of different
+antidepressants that I made a list of in a file. I then made a file to extract those records as well as the npi number with
+it.
+
+Once I had my antidepressant and npi number extracted. I needed to find the zipcode connected to that npi number. So I went
+though a data set that gave me a zip code for each npi number. I wanted to see if the npi number for the antidepressant is
+in this file of npi and the zip code, and if so then send that zip code with that antidepressant. I also tallied how many
+time that npi number came up, so I can keep a tally of how many times antidepressants were given per zip code.
+
+I then had the number of antidepressants per zip code. But I needed to get the population for that zipcode to later find
+the per capita. I used a data set that had population per zip code specifically 65 years and older that was as well the
+same year as the Medicare data. I tried to find the zip code corresponding to how many antidepressants to this data set to
+get the correspond zip code and the population. Then I send the results of how many antidepressants and the population for
+that zipcode.
+
+After all that, I have all my data and results to find the end result. I had to find the per capita. I took the number of
+antidepressants divided by the population and then multiply that by 100 to get the per capita in percent. When looking at
+the percentages of how many antidepressants in a given area, they were low, the highiest around 2.8 percent. The decimals
+are long to be able to represent the small difference in percentage to understand where more antidepressants are given.
+
+The graph.pdf is made through mattedPlots in graph.py which represents my results.
+Since there is an outlier for a huge population, I made another graph clearGraph.pdf which will help spread
+the results by not having the outlier. clearGraph.py has an if stament to make sure the population is less
+then 40000, then plot the results.
+
+The conclusion is that the lower population have more of a higher per capita of antideprresents the higher populated aread of ages 65+.
+This isn't as surprising when thinking there is a lot more socializion and transportation, etc in more populated areas making life easier
+and happier.
